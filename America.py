@@ -40,16 +40,22 @@ def escolhas(teclado):
 
     if ((teclado.key_pressed("w")) or (teclado.key_pressed("up"))) and status_escolhas.getState()== 1:
         status_escolhas.setState(Frame.OPCOES)
+        janela.delay(150)
     elif ((teclado.key_pressed("s")) or (teclado.key_pressed("down"))) and status_escolhas.getState()== 1:
         status_escolhas.setState(Frame.CONTROLES)
+        janela.delay(150)
     elif ((teclado.key_pressed("w")) or (teclado.key_pressed("up"))) and status_escolhas.getState()== 2:
         status_escolhas.setState(Frame.JOGAR)
+        janela.delay(150)
     elif ((teclado.key_pressed("s")) or (teclado.key_pressed("down"))) and status_escolhas.getState()== 2:
         status_escolhas.setState(Frame.OPCOES)
+        janela.delay(150)
     elif ((teclado.key_pressed("w")) or (teclado.key_pressed("up"))) and status_escolhas.getState()== 3:
         status_escolhas.setState(Frame.CONTROLES)
+        janela.delay(150)
     elif ((teclado.key_pressed("s")) or (teclado.key_pressed("down"))) and status_escolhas.getState()== 3:
         status_escolhas.setState(Frame.JOGAR)
+        janela.delay(150)
 
     if status_escolhas.getState() == 1:
         frame_escolhas.set_position(256,125)
@@ -64,10 +70,10 @@ def escolhas(teclado):
         if teclado.key_pressed("ENTER"):
             print("AINDA NAO IMPLEMENTADO!")
 
-def personagem(teclado):
+def personagem():
     print("AINDA NAO IMPLEMENTADO")
 
-def jogo(teclado):
+def jogo():
     print("Coloca o jogo aqui POVO ")
 
 
@@ -78,7 +84,7 @@ while True:
     elif status.getState() == GameState.ESCOLHAS:
         escolhas(teclado)
     elif status.getState() == GameState.PERSONAGEM:
-        personagem(teclado)
+        personagem()
     elif status.getState() == GameState.JOGO:
-        jogo(teclado)
+        jogo()
     janela.update()
