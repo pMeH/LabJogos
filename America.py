@@ -39,7 +39,7 @@ def escolhas(teclado):
     frame_escolhas.draw()
 
     if ((teclado.key_pressed("w")) or (teclado.key_pressed("up"))) and status_escolhas.getState()== 1:
-        status_escolhas.setState(Frame.OPCOES)
+        status_escolhas.setState(Frame.SAIR)
         janela.delay(150)
     elif ((teclado.key_pressed("s")) or (teclado.key_pressed("down"))) and status_escolhas.getState()== 1:
         status_escolhas.setState(Frame.CONTROLES)
@@ -48,7 +48,7 @@ def escolhas(teclado):
         status_escolhas.setState(Frame.JOGAR)
         janela.delay(150)
     elif ((teclado.key_pressed("s")) or (teclado.key_pressed("down"))) and status_escolhas.getState()== 2:
-        status_escolhas.setState(Frame.OPCOES)
+        status_escolhas.setState(Frame.SAIR)
         janela.delay(150)
     elif ((teclado.key_pressed("w")) or (teclado.key_pressed("up"))) and status_escolhas.getState()== 3:
         status_escolhas.setState(Frame.CONTROLES)
@@ -68,7 +68,7 @@ def escolhas(teclado):
     elif status_escolhas.getState() == 3:
         frame_escolhas.set_position(256,282)
         if teclado.key_pressed("ENTER"):
-            print("AINDA NAO IMPLEMENTADO!")
+            janela.close()
 
 def personagem():
     print("AINDA NAO IMPLEMENTADO")
