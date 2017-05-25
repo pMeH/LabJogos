@@ -2,7 +2,7 @@ class Frame(object):
 
     JOGAR = 1
     CONTROLES = 2
-    OPCOES = 3
+    SAIR = 3
     def __init__(self,state = JOGAR):
         self.state = state
 
